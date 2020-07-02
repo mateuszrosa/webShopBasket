@@ -1,7 +1,6 @@
 const inputs = document.querySelectorAll('input[type="number"]');
 const result = document.querySelector("span.font-bold");
 const quits = document.querySelectorAll(".pl-4");
-console.log(quits);
 let sum = 0;
 
 for (let i = 0; i < inputs.length; i++) {
@@ -22,6 +21,7 @@ for (let i = 0; i < inputs.length; i++) {
 
 quits.forEach((quit) => {
   quit.addEventListener("click", (e) => {
+    console.log(e.target);
     e.target.parentNode.parentNode.parentNode.parentNode.remove();
   });
 });
